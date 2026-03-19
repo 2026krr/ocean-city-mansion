@@ -118,7 +118,7 @@ function renderFooter() {
         </div>\
         <div class="footer-col">\
           <h4>Stay</h4>\
-          <a href="./rooms.html">Rooms &amp; Suites</a>\
+          <a href="./rooms.html">Rooms, Suites &amp; Apartments</a>\
           <a href="./offers.html">Offers</a>\
           <a href="./book.html">Book Now</a>\
         </div>\

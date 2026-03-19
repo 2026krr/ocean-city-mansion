@@ -17,57 +17,536 @@
 <link rel="author" href="https://www.perplexity.ai/computer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creators | Ocean City Mansion</title>
-<meta name="description" content="Content creator program at Ocean City Mansion. Apply to stay in exchange for content creation.">
+<title>Creator Partnerships | Ocean City Mansion</title>
+<meta name="description" content="Partner with Ocean City Mansion — a boutique Victorian hotel in Ocean City, NJ. We collaborate with content creators, photographers, and travel influencers who share our love for the shore.">
+<meta property="og:title" content="Creator Partnerships | Ocean City Mansion">
+<meta property="og:description" content="We love working with creators. Apply to collaborate with Ocean City Mansion — boutique Victorian hotel in Ocean City, NJ.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./images/porch-lifestyle.png">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
+
+<script>
+  window.__HA_CONFIG = {
+    property_id: "ocean-city-mansion",
+    gtm_id: "GTM-PDRSFKT",
+    ga4_id: "G-9F4B5TZL03",
+    klaviyo_company_id: "SYtXUU",
+    klaviyo_list_email: "TE7gJq",
+    booking_engine: "mews"
+  };
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',(window.__HA_CONFIG && window.__HA_CONFIG.gtm_id) || '');</script>
+
 <script src="https://api.mews.com/distributor/distributor.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Creator Partnerships",
+  "description": "Partner with Ocean City Mansion — a boutique Victorian hotel in Ocean City, NJ. We collaborate with content creators, photographers, and travel influencers.",
+  "url": "https://ocean-city-mansion.vercel.app/creators.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ocean City Mansion",
+    "url": "https://ocean-city-mansion.vercel.app"
+  },
+  "creator": {"@type": "SoftwareApplication", "name": "Perplexity Computer", "url": "https://www.perplexity.ai/computer"}
+}
+</script>
+
+<style>
+  .creator-perks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  .creator-perk {
+    text-align: center;
+    padding: var(--space-6) var(--space-4);
+  }
+  .creator-perk svg {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto var(--space-4);
+    color: var(--color-blush-dark);
+  }
+  .creator-perk h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
+  }
+  .creator-perk p {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .creator-perks {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-4) center;
+    padding-right: var(--space-8);
+  }
+  .form-note {
+    font-size: var(--text-xs);
+    color: var(--color-gray-400);
+    margin-top: var(--space-1);
+  }
+  .creator-form-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .creator-intro {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .creator-intro p {
+    color: var(--color-gray-700);
+    font-size: var(--text-md);
+    line-height: 1.7;
+  }
+  .what-we-look-for {
+    max-width: 680px;
+    margin: var(--space-10) auto 0;
+    padding: var(--space-8);
+    background: var(--color-white);
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-100);
+  }
+  .what-we-look-for h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-4);
+    text-align: center;
+  }
+  .what-we-look-for ul {
+    list-style: none;
+    padding: 0;
+  }
+  .what-we-look-for li {
+    padding: var(--space-2) 0;
+    padding-left: var(--space-6);
+    position: relative;
+    color: var(--color-gray-700);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+  .what-we-look-for li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-blush);
+    border-radius: 50%;
+  }
+</style>
+
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="about:blank" id="gtm-noscript" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+(function() {
+  var gtmId = (window.__HA_CONFIG && window.__HA_CONFIG.gtm_id) || '';
+  if (gtmId) {
+    var el = document.getElementById('gtm-noscript');
+    if (el) el.src = 'https://www.googletagmanager.com/ns.html?id=' + gtmId;
+  }
+})();
+</script>
 <a href="#main" class="skip-link">Skip to main content</a>
 <header class="site-header" id="site-header" role="banner"></header>
+
 <main id="main">
-  <section class="section section--cream" style="padding-top:calc(var(--header-height) + var(--space-16));">
-    <div class="container container--narrow">
-      <div class="page-intro fade-in">
-        <p class="label mb-4">Creator Program</p>
-        <h1 class="heading-uppercase" style="font-size:var(--text-3xl);">Creators</h1>
-        <p>We partner with photographers, travel writers, and content creators who share our appreciation for design, architecture, and thoughtful hospitality.</p>
+  <!-- Hero -->
+  <section class="hero" style="min-height: 50vh;" aria-label="Creator partnerships hero">
+    <div class="hero-bg">
+      <img src="./images/porch-lifestyle.png" alt="Creator capturing content on the wraparound porch at Ocean City Mansion" width="1920" height="1080" loading="eager" fetchpriority="high">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="label">Create With Us</p>
+      <h1 class="heading-uppercase" style="font-size:var(--text-3xl);">Creator Partnerships</h1>
+      <p>We love working with creators who love the shore.</p>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="section section--cream" aria-label="About creator partnerships">
+    <div class="container">
+      <div class="creator-intro fade-in">
+        <p class="label mb-4">Why We Partner with Creators</p>
+        <h2 class="heading-uppercase mb-6" style="font-size: var(--text-2xl);">Your Story, Our Shore</h2>
+        <p>Ocean City Mansion was built for storytelling. From the restored Victorian architecture to the wraparound porch at golden hour, every corner of this property is designed to inspire. We partner with content creators, photographers, travel writers, and influencers who share our passion for the coast and can bring the Ocean City Mansion experience to life for their audiences.</p>
+        <p style="margin-top: var(--space-4);">We are not chasing follower counts. We are looking for genuine connection, quality content, and creators whose aesthetic and audience align with what we are building here in Ocean City.</p>
       </div>
 
-      <div class="fade-in" style="max-width:600px;margin:0 auto;">
-        <div class="two-col-image mb-8">
-          <img src="./images/porch-lifestyle.png" alt="Wraparound porch — ideal for content creation" width="600" height="450" loading="lazy">
+      <!-- What We Offer -->
+      <div class="creator-perks fade-in">
+        <div class="creator-perk">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <h3>Complimentary Stays</h3>
+          <p>Experience Ocean City Mansion as a guest — rooms, suites, or apartments tailored to your content needs.</p>
         </div>
+        <div class="creator-perk">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+          <h3>Creative Freedom</h3>
+          <p>We believe in authentic storytelling. Capture Ocean City Mansion your way — no scripts, no shot lists.</p>
+        </div>
+        <div class="creator-perk">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h3>Long-Term Relationships</h3>
+          <p>We value ongoing partnerships over one-off posts. Great collaborations grow over time.</p>
+        </div>
+      </div>
 
-        <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-4);">What we look for</h3>
-        <ul class="room-amenities-list mb-8">
-          <li>Authentic, high-quality content</li>
-          <li>Engaged audience in travel, design, or lifestyle</li>
-          <li>Alignment with our brand voice and aesthetic</li>
-          <li>Minimum 5,000 followers on primary platform</li>
+      <!-- What We Look For -->
+      <div class="what-we-look-for fade-in">
+        <h3>What We Look For</h3>
+        <ul>
+          <li>Authentic, high-quality visual content that tells a story</li>
+          <li>An engaged audience — we care more about engagement than follower count</li>
+          <li>Alignment with the Ocean City Mansion aesthetic: Victorian, design-forward, coastal ease</li>
+          <li>Travel, lifestyle, food, family, or design-focused content creators</li>
+          <li>Creators based in the Northeast US or with audiences in our target markets (Philadelphia, New York, Baltimore, Washington DC)</li>
+          <li>Professional communication and ability to deliver on agreed timelines</li>
         </ul>
+      </div>
+    </div>
+  </section>
 
-        <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-4);">What we offer</h3>
-        <ul class="room-amenities-list mb-8">
-          <li>Complimentary 1-2 night stay</li>
-          <li>Full breakfast and amenities</li>
-          <li>Access to the mansion and grounds for content</li>
-          <li>Feature on our social channels</li>
-        </ul>
+  <!-- Application Form -->
+  <section class="section section--white" aria-label="Creator partnership application form">
+    <div class="container">
+      <div class="creator-form-wrapper fade-in">
+        <p class="label mb-4" style="text-align: center;">Apply to Partner</p>
+        <h2 class="heading-uppercase mb-4" style="font-size: var(--text-2xl); text-align: center;">Tell Us About Yourself</h2>
+        <p style="text-align: center; color: var(--color-gray-500); margin-bottom: var(--space-10); font-size: var(--text-sm);">Fill out the form below and we will review your application within 5 business days. All fields marked with * are required.</p>
 
-        <div class="text-center">
-          <a href="mailto:hello@ocmansion.com?subject=Creator%20Program%20Application" class="btn btn--primary">Apply Now</a>
+        <form id="creator-form" onsubmit="handleCreatorForm(event)" novalidate>
+          <!-- Personal Info -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="creator-first">First Name *</label>
+              <input type="text" id="creator-first" name="first_name" required placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label for="creator-last">Last Name *</label>
+              <input type="text" id="creator-last" name="last_name" required placeholder="Last name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-email">Email Address *</label>
+            <input type="email" id="creator-email" name="email" required placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="creator-phone">Phone Number</label>
+            <input type="tel" id="creator-phone" name="phone" placeholder="Optional">
+          </div>
+
+          <!-- Social & Content -->
+          <div class="form-group" style="margin-top: var(--space-8);">
+            <label for="creator-instagram">Instagram Handle *</label>
+            <input type="text" id="creator-instagram" name="instagram" required placeholder="@yourusername">
+            <p class="form-note">Your primary platform for the partnership.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-tiktok">TikTok Handle</label>
+            <input type="text" id="creator-tiktok" name="tiktok" placeholder="@yourusername">
+          </div>
+
+          <div class="form-group">
+            <label for="creator-website">Website or Blog</label>
+            <input type="url" id="creator-website" name="website" placeholder="https://yoursite.com">
+          </div>
+
+          <div class="form-group">
+            <label for="creator-other">Other Platforms</label>
+            <input type="text" id="creator-other" name="other_platforms" placeholder="YouTube, Pinterest, Twitter/X, etc.">
+          </div>
+
+          <!-- Audience -->
+          <div class="form-row" style="margin-top: var(--space-8);">
+            <div class="form-group">
+              <label for="creator-followers">Total Followers (Approx.) *</label>
+              <select id="creator-followers" name="follower_range" required>
+                <option value="" disabled selected>Select range</option>
+                <option value="under-5k">Under 5,000</option>
+                <option value="5k-10k">5,000 — 10,000</option>
+                <option value="10k-25k">10,000 — 25,000</option>
+                <option value="25k-50k">25,000 — 50,000</option>
+                <option value="50k-100k">50,000 — 100,000</option>
+                <option value="100k-plus">100,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="creator-engagement">Avg. Engagement Rate</label>
+              <select id="creator-engagement" name="engagement_rate">
+                <option value="" disabled selected>Select range</option>
+                <option value="under-2">Under 2%</option>
+                <option value="2-4">2% — 4%</option>
+                <option value="4-6">4% — 6%</option>
+                <option value="6-10">6% — 10%</option>
+                <option value="10-plus">10%+</option>
+                <option value="not-sure">Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-niche">Content Niche *</label>
+            <select id="creator-niche" name="content_niche" required>
+              <option value="" disabled selected>Select your primary niche</option>
+              <option value="travel">Travel & Hospitality</option>
+              <option value="lifestyle">Lifestyle</option>
+              <option value="food">Food & Dining</option>
+              <option value="family">Family & Parenting</option>
+              <option value="design">Design & Architecture</option>
+              <option value="photography">Photography</option>
+              <option value="fashion">Fashion & Beauty</option>
+              <option value="wellness">Wellness & Fitness</option>
+              <option value="couples">Couples & Romance</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-audience-location">Audience Location</label>
+            <input type="text" id="creator-audience-location" name="audience_location" placeholder="e.g., Northeast US, Philadelphia area, nationwide">
+            <p class="form-note">Where is most of your audience based?</p>
+          </div>
+
+          <!-- Partnership Details -->
+          <div class="form-group" style="margin-top: var(--space-8);">
+            <label for="creator-type">Partnership Type *</label>
+            <select id="creator-type" name="partnership_type" required>
+              <option value="" disabled selected>What are you looking for?</option>
+              <option value="hosted-stay">Hosted Stay (Complimentary)</option>
+              <option value="paid">Paid Collaboration</option>
+              <option value="trade">Trade / Barter</option>
+              <option value="ambassador">Long-Term Ambassador</option>
+              <option value="open">Open to Discussion</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-dates">Preferred Dates</label>
+            <input type="text" id="creator-dates" name="preferred_dates" placeholder="e.g., June 2026, flexible, weekdays preferred">
+            <p class="form-note">Approximate timing — we can work out specifics later.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-deliverables">Proposed Deliverables</label>
+            <textarea id="creator-deliverables" name="deliverables" placeholder="What content would you create? E.g., 2 Instagram Reels, 5 Stories, 1 blog post, TikTok series..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-why">Why Ocean City Mansion? *</label>
+            <textarea id="creator-why" name="why_ocm" required placeholder="Tell us why you would be a great fit for Ocean City Mansion and what excites you about this partnership."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-past">Past Brand Collaborations</label>
+            <textarea id="creator-past" name="past_collaborations" placeholder="Share some hotel/travel brands you have worked with recently — links to past content are great." style="min-height: 100px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="creator-media-kit">Media Kit Link</label>
+            <input type="url" id="creator-media-kit" name="media_kit_url" placeholder="Link to your media kit (Google Drive, Dropbox, etc.)">
+            <p class="form-note">If you have a media kit or rate card, drop the link here.</p>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; margin-top: var(--space-6);">Submit Application</button>
+        </form>
+
+        <div id="creator-success" style="display: none; text-align: center; padding: var(--space-10);">
+          <svg style="width:48px;height:48px;margin:0 auto var(--space-4);color:var(--color-blush-dark)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3 style="font-family: var(--font-display); font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-3);">Application Received</h3>
+          <p style="color: var(--color-gray-500); max-width: 400px; margin: 0 auto;">Thank you for your interest in partnering with Ocean City Mansion. We will review your application and get back to you within 5 business days.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA -->
+  <section class="section section--dark" aria-label="Contact">
+    <div class="container text-center fade-in">
+      <h2 class="heading-uppercase mb-4" style="font-size: var(--text-2xl);">Questions About Partnerships?</h2>
+      <p style="color: var(--color-gray-300); margin-bottom: var(--space-8); font-size: var(--text-md);">Reach out to us directly at <a href="mailto:hello@ocmansion.com" style="color: var(--color-white); text-decoration: underline;">hello@ocmansion.com</a></p>
+      <a href="./contact.html" class="btn btn--outline-white btn--lg">Contact Us</a>
+    </div>
+  </section>
 </main>
+
 <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
 <script src="./ha-tracking.js"></script>
 <script src="./app.js"></script>
+<script>
+function handleCreatorForm(e) {
+  e.preventDefault();
+  var form = e.target;
+
+  // Validate required fields
+  var requiredFields = form.querySelectorAll('[required]');
+  var valid = true;
+  requiredFields.forEach(function(field) {
+    if (!field.value.trim()) {
+      field.style.borderColor = 'var(--color-blush)';
+      valid = false;
+    } else {
+      field.style.borderColor = '';
+    }
+  });
+  if (!valid) return;
+
+  // Collect all form data
+  var data = {
+    first_name: form.first_name.value.trim(),
+    last_name: form.last_name.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    instagram: form.instagram.value.trim(),
+    tiktok: form.tiktok.value.trim(),
+    website: form.website.value.trim(),
+    other_platforms: form.other_platforms.value.trim(),
+    follower_range: form.follower_range.value,
+    engagement_rate: form.engagement_rate.value,
+    content_niche: form.content_niche.value,
+    audience_location: form.audience_location.value.trim(),
+    partnership_type: form.partnership_type.value,
+    preferred_dates: form.preferred_dates.value.trim(),
+    deliverables: form.deliverables.value.trim(),
+    why_ocm: form.why_ocm.value.trim(),
+    past_collaborations: form.past_collaborations.value.trim(),
+    media_kit_url: form.media_kit_url.value.trim()
+  };
+
+  // Build a summary message
+  var message = 'CREATOR PARTNERSHIP APPLICATION\n\n' +
+    'Name: ' + data.first_name + ' ' + data.last_name + '\n' +
+    'Email: ' + data.email + '\n' +
+    'Phone: ' + (data.phone || 'Not provided') + '\n\n' +
+    'SOCIAL PROFILES:\n' +
+    'Instagram: ' + data.instagram + '\n' +
+    (data.tiktok ? 'TikTok: ' + data.tiktok + '\n' : '') +
+    (data.website ? 'Website: ' + data.website + '\n' : '') +
+    (data.other_platforms ? 'Other: ' + data.other_platforms + '\n' : '') + '\n' +
+    'AUDIENCE:\n' +
+    'Followers: ' + data.follower_range + '\n' +
+    'Engagement: ' + (data.engagement_rate || 'Not provided') + '\n' +
+    'Niche: ' + data.content_niche + '\n' +
+    'Audience Location: ' + (data.audience_location || 'Not provided') + '\n\n' +
+    'PARTNERSHIP:\n' +
+    'Type: ' + data.partnership_type + '\n' +
+    'Preferred Dates: ' + (data.preferred_dates || 'Flexible') + '\n' +
+    'Deliverables: ' + (data.deliverables || 'Not specified') + '\n\n' +
+    'WHY OCEAN CITY MANSION:\n' + data.why_ocm + '\n\n' +
+    (data.past_collaborations ? 'PAST COLLABORATIONS:\n' + data.past_collaborations + '\n\n' : '') +
+    (data.media_kit_url ? 'MEDIA KIT: ' + data.media_kit_url + '\n' : '');
+
+  // Create/update Klaviyo profile
+  if (typeof klaviyoCreateProfile === 'function') {
+    klaviyoCreateProfile({
+      email: data.email,
+      firstName: data.first_name,
+      lastName: data.last_name,
+      properties: {
+        'Creator Application': true,
+        'Instagram Handle': data.instagram,
+        'TikTok Handle': data.tiktok || '',
+        'Follower Range': data.follower_range,
+        'Content Niche': data.content_niche,
+        'Partnership Type': data.partnership_type,
+        'Source': 'Creator Partnership Form'
+      }
+    }).catch(function(err) {
+      console.error('Klaviyo profile error:', err);
+    });
+
+    if (typeof klaviyoTrackEvent === 'function') {
+      klaviyoTrackEvent('Creator Application Submitted', {
+        instagram: data.instagram,
+        follower_range: data.follower_range,
+        content_niche: data.content_niche,
+        partnership_type: data.partnership_type,
+        source: 'creators_page'
+      }, {
+        email: data.email,
+        first_name: data.first_name,
+        last_name: data.last_name
+      });
+    }
+  }
+
+  // Subscribe to email list
+  if (typeof klaviyoSubscribe === 'function') {
+    klaviyoSubscribe({
+      email: data.email,
+      firstName: data.first_name,
+      source: 'Creator Application',
+      listId: 'TE7gJq'
+    }).catch(function(err) {
+      console.error('Klaviyo subscribe error:', err);
+    });
+  }
+
+  // GA4 tracking
+  if (typeof shTrackContactSubmit === 'function') {
+    shTrackContactSubmit({
+      name: data.first_name + ' ' + data.last_name,
+      email: data.email,
+      message: 'Creator Partnership Application'
+    });
+  }
+
+  // Show success
+  form.style.display = 'none';
+  document.getElementById('creator-success').style.display = 'block';
+  window.scrollTo({ top: document.getElementById('creator-success').offsetTop - 100, behavior: 'smooth' });
+}
+</script>
 </body>
 </html>

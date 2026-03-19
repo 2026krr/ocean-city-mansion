@@ -17,8 +17,8 @@
 <link rel="author" href="https://www.perplexity.ai/computer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rooms & Suites | Ocean City Mansion</title>
-<meta name="description" content="Twelve individually designed rooms and suites in a restored 1895 Victorian mansion. Each room honors the building's original character.">
+<title>Rooms, Suites & Apartments | Ocean City Mansion</title>
+<meta name="description" content="Twelve individually designed rooms, suites, and apartments in a restored 1895 Victorian mansion. Each room honors the building's original character.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap">
@@ -36,7 +36,7 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 style="font-size:var(--text-3xl);">Rooms &amp; Suites</h1>
+      <h1 style="font-size:var(--text-3xl);">Rooms, Suites &amp; Apartments</h1>
       <p>Twelve individually designed rooms, each with its own character. Original architectural details meet modern comfort.</p>
     </div>
   </section>
@@ -46,6 +46,7 @@
       <div class="room-tabs fade-in" id="room-tabs" role="tablist" aria-label="Room categories">
         <button class="room-tab active" data-tab="rooms" role="tab" aria-selected="true" aria-controls="panel-rooms" id="tab-rooms">Rooms</button>
         <button class="room-tab" data-tab="suites" role="tab" aria-selected="false" aria-controls="panel-suites" id="tab-suites">Suites</button>
+        <button class="room-tab" data-tab="apartments" role="tab" aria-selected="false" aria-controls="panel-apartments" id="tab-apartments">Apartments</button>
       </div>
 
       <div class="room-tab-panel active" id="panel-rooms" role="tabpanel" aria-labelledby="tab-rooms">
@@ -119,6 +120,31 @@
         </div>
         <div class="scroll-indicator"><span class="scroll-indicator-dot active"></span><span class="scroll-indicator-dot"></span><span class="scroll-indicator-dot"></span></div>
       </div>
+
+      <!-- Apartments Panel -->
+      <div class="room-tab-panel" id="panel-apartments" role="tabpanel" aria-labelledby="tab-apartments">
+        <div class="grid-3 room-scroll-mobile fade-in">
+          <div class="room-card">
+            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Garden Apartment" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-body">
+              <h3>The Garden Apartment</h3>
+              <div class="room-card-specs"><span>King Bed</span><span>Sleeps 4</span><span>Full Kitchen</span></div>
+              <p>A ground-floor retreat with a private entrance, full kitchen, and living area. Extended stays welcome.</p>
+              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Carriage Apartment" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-body">
+              <h3>The Carriage Apartment</h3>
+              <div class="room-card-specs"><span>King + Pullout</span><span>Sleeps 4</span><span>Kitchenette</span></div>
+              <p>Generous living space with a separate bedroom, kitchenette, and the feel of your own shore house.</p>
+              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator"><span class="scroll-indicator-dot active"></span><span class="scroll-indicator-dot"></span></div>
+      </div>
     </div>
   </section>
 
@@ -133,7 +159,7 @@
         <li>Complimentary Wi-Fi</li>
         <li>Individually controlled climate</li>
         <li>Curated art and period details</li>
-        <li>Complimentary breakfast each morning</li>
+        <li>Complimentary grab-n-go snacks, espresso, tea, coffee, filtered and sparkling water, ice</li>
         <li>Beach tags, chairs, and umbrellas</li>
         <li>Concierge service</li>
         <li>Access to the wraparound porch</li>
