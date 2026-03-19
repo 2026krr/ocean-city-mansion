@@ -109,7 +109,7 @@ function renderFooter() {
       <div class="footer-grid">\
         <div class="footer-brand">\
           <div class="logo-text">Ocean City Mansion</div>\
-          <p>A 12-room boutique hotel in a restored 1895 Victorian mansion. Steps from the beach and boardwalk in Ocean City, NJ.</p>\
+          <p>A 12-room boutique hotel in a restored 1898 Victorian mansion. Steps from the beach and boardwalk in Ocean City, NJ.</p>\
           <div class="footer-social">\
             <a href="https://www.instagram.com/oceancitymansion/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">\
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>\
