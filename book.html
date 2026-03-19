@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Direct | Ocean City Mansion</title>
+<meta name="description" content="Book your stay at Ocean City Mansion. Best rate guarantee when you book direct.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://api.mews.com/distributor/distributor.min.js"></script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="site-header" id="site-header" role="banner"></header>
+<main id="main">
+  <section class="section section--dark" style="padding-top:calc(var(--header-height) + var(--space-16));">
+    <div class="container text-center">
+      <h1 class="heading-uppercase mb-6" style="font-size:var(--text-3xl);">Book Direct</h1>
+      <p style="color:var(--color-gray-300);margin-bottom:var(--space-8);max-width:600px;margin-left:auto;margin-right:auto;">The best rates and perks are always here. No middlemen, no hidden fees — just a direct connection to Ocean City Mansion.</p>
+      <div class="book-direct-benefits">
+        <div class="book-direct-benefit">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Best Rate Guarantee</span>
+        </div>
+        <div class="book-direct-benefit">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Complimentary Breakfast</span>
+        </div>
+        <div class="book-direct-benefit">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Late Checkout (when available)</span>
+        </div>
+        <div class="book-direct-benefit">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Direct Communication</span>
+        </div>
+      </div>
+      <button class="btn btn--primary btn--lg distributor-open" id="book-open-btn">Check Availability</button>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container text-center fade-in">
+      <p class="label mb-4">Need Help Booking?</p>
+      <h2 class="heading-uppercase mb-6" style="font-size:var(--text-2xl);">We are here to help.</h2>
+      <p style="color:var(--color-gray-700);max-width:500px;margin:0 auto var(--space-8);">Call or email us directly and we will help you find the perfect room for your stay.</p>
+      <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+        <a href="tel:6092335447" class="btn btn--outline">(609) 233-5447</a>
+        <a href="mailto:hello@ocmansion.com" class="btn btn--outline">hello@ocmansion.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+<script src="./ha-tracking.js"></script>
+<script src="./app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof Mews !== 'undefined' && Mews.Distributor) {
+    Mews.Distributor({
+      configurationIds: ['02935563-ec28-43c3-af95-aab100b767c5'],
+      openElements: '.distributor-open'
+    }, function(api) {
+      api.open();
+    });
+  }
+});
+</script>
+</body>
+</html>
