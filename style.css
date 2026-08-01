@@ -262,6 +262,18 @@ h4 { font-size: var(--text-xl); }
   white-space: nowrap;
 }
 
+.logo-center a { display: inline-block; line-height: 0; }
+.header-logo {
+  display: block;
+  height: clamp(48px, 5vw, 68px);
+  width: auto;
+  transition: opacity 0.2s;
+}
+.logo-center a:hover .header-logo { opacity: 0.85; }
+@media (max-width: 768px) {
+  .header-logo { height: 44px; }
+}
+
 /* Book Now */
 .nav-right {
   flex: 1;
@@ -2262,9 +2274,7 @@ h4 { font-size: var(--text-xl); }
 }
 .hero-video-fallback { z-index: 0; }
 .hero-video { z-index: 1; }
-/* Show fallback image if video fails to load / while poster loads */
-.hero-video:not([src]),
-.hero-video[src=""] { display: none; }
+/* Video sits above fallback image */
 
 /* Hero logo (over the video) */
 .hero-logo {

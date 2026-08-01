@@ -7,13 +7,7 @@ function renderHeader() {
   header.innerHTML = '\
     <div class="header-inner">\
       <nav class="nav-left" aria-label="Main navigation">\
-        <div class="nav-dropdown">\
-          <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Stay</button>\
-          <div class="nav-dropdown-menu" role="menu">\
-            <a href="./rooms.html" role="menuitem">Our Rooms</a>\
-            <a href="./book.html" role="menuitem">Reserve Your Stay</a>\
-          </div>\
-        </div>\
+        <a href="./rooms.html">Stay</a>\
         <a href="./amenities.html">Amenities</a>\
         <a href="./gallery.html">Gallery</a>\
         <a href="./faqs.html">FAQs</a>\
@@ -21,11 +15,11 @@ function renderHeader() {
       </nav>\
       <div class="logo-center">\
         <a href="./index.html" aria-label="Ocean City Mansion - Home">\
-          <span class="logo-text">Ocean City Mansion</span>\
+          <img src="./images/logo.png" alt="Ocean City Mansion" class="header-logo">\
         </a>\
       </div>\
       <div class="nav-right">\
-        <a href="./book.html" class="btn-book-header">Book Now</a>\
+        <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn-book-header">Book Now</a>\
       </div>\
       <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">\
         <span></span><span></span><span></span>\
@@ -41,12 +35,12 @@ function renderHeader() {
     mobileNav.setAttribute('role', 'navigation');
     mobileNav.setAttribute('aria-label', 'Mobile navigation');
     mobileNav.innerHTML = '\
-      <a href="./rooms.html">Our Rooms</a>\
+      <a href="./rooms.html">Stay</a>\
       <a href="./amenities.html">Amenities</a>\
       <a href="./gallery.html">Gallery</a>\
       <a href="./faqs.html">FAQs</a>\
       <a href="./contact.html">Contact</a>\
-      <a href="./book.html" class="btn-book-mobile">Book Now</a>\
+      <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn-book-mobile">Book Now</a>\
     ';
     header.after(mobileNav);
   }
@@ -109,17 +103,17 @@ function renderFooter() {
           <div class="logo-text">Ocean City Mansion</div>\
           <p>A 12-room boutique hotel in a restored 1898 Victorian mansion. Steps from the beach and boardwalk in Ocean City, NJ.</p>\
           <div class="footer-social">\
-            <a href="https://www.instagram.com/oceancitymansion/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">\
+            <a href="https://www.instagram.com/ocmansionnj/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">\
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>\
             </a>\
           </div>\
         </div>\
         <div class="footer-col">\
           <h4>Stay</h4>\
-          <a href="./rooms.html">Our Rooms</a>\
+          <a href="./rooms.html">Stay</a>\
           <a href="./amenities.html">Amenities</a>\
           <a href="./gallery.html">Gallery</a>\
-          <a href="./book.html">Book Now</a>\
+          <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer">Book Now</a>\
         </div>\
         <div class="footer-col">\
           <h4>Explore</h4>\
@@ -149,7 +143,6 @@ function renderFooter() {
         <div class="footer-bottom-links">\
           <a href="./privacy.html">Privacy</a>\
           <a href="./terms.html">Terms</a>\
-          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>\
         </div>\
       </div>\
     </div>\
