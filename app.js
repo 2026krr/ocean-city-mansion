@@ -10,15 +10,14 @@ function renderHeader() {
         <div class="nav-dropdown">\
           <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Stay</button>\
           <div class="nav-dropdown-menu" role="menu">\
-            <a href="./rooms.html" role="menuitem">Rooms &amp; Suites</a>\
+            <a href="./rooms.html" role="menuitem">Our Rooms</a>\
+            <a href="./book.html" role="menuitem">Reserve Your Stay</a>\
           </div>\
         </div>\
-        <a href="./gather.html">Gather</a>\
-        <a href="./offers.html">Offers</a>\
-        <a href="./blog.html">Blog</a>\
+        <a href="./amenities.html">Amenities</a>\
+        <a href="./gallery.html">Gallery</a>\
         <a href="./faqs.html">FAQs</a>\
         <a href="./contact.html">Contact</a>\
-        <a href="./creators.html">Creators</a>\
       </nav>\
       <div class="logo-center">\
         <a href="./index.html" aria-label="Ocean City Mansion - Home">\
@@ -42,13 +41,11 @@ function renderHeader() {
     mobileNav.setAttribute('role', 'navigation');
     mobileNav.setAttribute('aria-label', 'Mobile navigation');
     mobileNav.innerHTML = '\
-      <a href="./rooms.html">Rooms &amp; Suites</a>\
-      <a href="./gather.html">Gather</a>\
-      <a href="./offers.html">Offers</a>\
-      <a href="./blog.html">Blog</a>\
+      <a href="./rooms.html">Our Rooms</a>\
+      <a href="./amenities.html">Amenities</a>\
+      <a href="./gallery.html">Gallery</a>\
       <a href="./faqs.html">FAQs</a>\
       <a href="./contact.html">Contact</a>\
-      <a href="./creators.html">Creators</a>\
       <a href="./book.html" class="btn-book-mobile">Book Now</a>\
     ';
     header.after(mobileNav);
@@ -118,17 +115,16 @@ function renderFooter() {
         </div>\
         <div class="footer-col">\
           <h4>Stay</h4>\
-          <a href="./rooms.html">Rooms, Suites &amp; Apartments</a>\
-          <a href="./offers.html">Offers</a>\
+          <a href="./rooms.html">Our Rooms</a>\
+          <a href="./amenities.html">Amenities</a>\
+          <a href="./gallery.html">Gallery</a>\
           <a href="./book.html">Book Now</a>\
         </div>\
         <div class="footer-col">\
           <h4>Explore</h4>\
-          <a href="./gather.html">Gather</a>\
-          <a href="./blog.html">Blog</a>\
+          <a href="./gallery.html">Gallery</a>\
           <a href="./faqs.html">FAQs</a>\
           <a href="./contact.html">Contact</a>\
-          <a href="./creators.html">Creators</a>\
           <a href="./privacy.html">Privacy Policy</a>\
           <a href="./terms.html">Terms of Service</a>\
         </div>\
@@ -141,8 +137,8 @@ function renderFooter() {
           </form>\
           <div style="margin-top: var(--space-8);">\
             <h4>Contact</h4>\
-            <a href="tel:6092335447" style="display:block;padding:2px 0">(609) 233-5447</a>\
-            <a href="mailto:hello@ocmansion.com" style="display:block;padding:2px 0">hello@ocmansion.com</a>\
+            <a href="tel:+12673312282" style="display:block;padding:2px 0">(267) 331-2282</a>\
+            <a href="mailto:management@vichproperties.com" style="display:block;padding:2px 0">management@vichproperties.com</a>\
             <p style="font-size:var(--text-xs);color:var(--color-gray-500);margin-top:var(--space-2);">416 Central Avenue<br>Ocean City, NJ 08226</p>\
           </div>\
         </div>\

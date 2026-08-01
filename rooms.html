@@ -17,14 +17,18 @@
 <link rel="author" href="https://www.perplexity.ai/computer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rooms, Suites & Apartments | Ocean City Mansion</title>
-<meta name="description" content="Twelve individually designed rooms, suites, and apartments in a restored 1898 Victorian mansion. Each room honors the building's original character.">
+<title>Our Rooms | Ocean City Mansion</title>
+<meta name="description" content="Twelve individually designed rooms in a restored 1898 Victorian. Six pet-friendly, one with a full kitchen, several with Juliet balconies.">
+<meta property="og:title" content="Our Rooms | Ocean City Mansion">
+<meta property="og:description" content="Twelve individually designed rooms in a restored 1898 Victorian. Six pet-friendly, one with a full kitchen, several with Juliet balconies.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./images/room-8.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap">
+<link rel="dns-prefetch" href="https://oceancitymansion.guestybookings.com">
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
-<script src="https://api.mews.com/distributor/distributor.min.js"></script>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -32,138 +36,286 @@
 <main id="main">
   <section class="hero" aria-label="Rooms hero" style="min-height:50vh;">
     <div class="hero-bg">
-      <img src="./images/room-king.png" alt="King room at Ocean City Mansion" width="1920" height="1080" loading="eager" fetchpriority="high">
+      <img src="./images/room-8.jpg" alt="Asbury Room at Ocean City Mansion" width="1800" height="1200" loading="eager" fetchpriority="high">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 style="font-size:var(--text-3xl);">Rooms, Suites &amp; Apartments</h1>
-      <p>Twelve individually designed rooms, each with its own character. Original architectural details meet modern comfort.</p>
+      <p class="label" style="color:rgba(255,255,255,0.85);margin-bottom:var(--space-4);letter-spacing:0.3em;">OUR ROOMS</p>
+      <h1 style="font-size:var(--text-3xl);">Twelve Individually Designed Rooms</h1>
+      <p>Escape the ordinary at Ocean City's premier European-inspired luxury boutique hotel.</p>
     </div>
   </section>
 
-  <section class="section section--cream" aria-label="Room categories">
+  <section class="section section--cream" aria-label="Rooms intro">
+    <div class="container container--prose text-center fade-in">
+      <p style="font-size:var(--text-md);color:var(--color-gray-700);line-height:1.8;">
+        This intimate 12-room retreat blends Parisian elegance with Jersey Shore charm — curated interiors, premium furnishings, and personalized hospitality. Perfectly located steps from beaches, dining, nightlife, shopping, and local attractions, it offers both convenience and tranquility. Ideal for romantic getaways, girls' trips, celebrations, and relaxing escapes.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--white" aria-label="Rooms grid">
     <div class="container">
-      <div class="room-tabs fade-in" id="room-tabs" role="tablist" aria-label="Room categories">
-        <button class="room-tab active" data-tab="rooms" role="tab" aria-selected="true" aria-controls="panel-rooms" id="tab-rooms">Rooms</button>
-        <button class="room-tab" data-tab="suites" role="tab" aria-selected="false" aria-controls="panel-suites" id="tab-suites">Suites</button>
-        <button class="room-tab" data-tab="apartments" role="tab" aria-selected="false" aria-controls="panel-apartments" id="tab-apartments">Apartments</button>
-      </div>
-
-      <div class="room-tab-panel active" id="panel-rooms" role="tabpanel" aria-labelledby="tab-rooms">
-        <div class="grid-3 room-scroll-mobile fade-in">
+      <div class="grid-3 fade-in">
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-king.png" alt="The Keeper" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-image">
+              <img src="./images/room-1.jpg" alt="Central Room 1 — A pet-friendly room with its own private entrance and a cozy, welcoming layout." width="1800" height="1200" loading="lazy">
+              <span class="room-card-badge">Pet Friendly</span>
+            </div>
             <div class="room-card-body">
-              <h3>The Keeper</h3>
-              <div class="room-card-specs"><span>King Bed</span><span>Sleeps 2</span><span>Private Bath</span></div>
-              <p>A quiet retreat with original crown molding and soft morning light. The kind of room that asks you to stay a little longer.</p>
+              <h3>Central Room 1</h3>
+              <div class="room-card-specs">
+                <span>One King Bed</span>
+                <span>Sleeps 2</span>
+                <span>First Floor</span>
+              </div>
+              <p>A pet-friendly room with its own private entrance and a cozy, welcoming layout.</p>
+              <p class="room-card-price-line">From <strong>$399</strong> / night</p>
               <div class="room-card-buttons">
-                <a href="./book.html" class="btn btn--primary">Book Now</a>
+                <a href="./central-room-1.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
               </div>
             </div>
           </div>
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-king.png" alt="The Driftwood" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-image">
+              <img src="./images/room-2.jpg" alt="Surf Room 2 — A cozy, pet-friendly room with its own private entrance — comfortable and unfussy." width="1800" height="1200" loading="lazy">
+              <span class="room-card-badge">Pet Friendly</span>
+            </div>
             <div class="room-card-body">
-              <h3>The Driftwood</h3>
-              <div class="room-card-specs"><span>Queen Bed</span><span>Sleeps 2</span><span>Private Bath</span></div>
-              <p>Warm wood tones meet coastal ease. Arched doorways and vintage brass fixtures set the tone for an unhurried stay.</p>
+              <h3>Surf Room 2</h3>
+              <div class="room-card-specs">
+                <span>One Queen Bed</span>
+                <span>Sleeps 2</span>
+                <span>First Floor</span>
+              </div>
+              <p>A cozy, pet-friendly room with its own private entrance — comfortable and unfussy.</p>
+              <p class="room-card-price-line">From <strong>$399</strong> / night</p>
               <div class="room-card-buttons">
-                <a href="./book.html" class="btn btn--primary">Book Now</a>
+                <a href="./surf-room-2.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
               </div>
             </div>
           </div>
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-king.png" alt="The Lantern" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-image">
+              <img src="./images/room-3.jpg" alt="Atlantic Room 3 — A spacious pet-friendly retreat with its own private entrance and a full kitchen." width="1800" height="1200" loading="lazy">
+              <span class="room-card-badge">Pet Friendly</span>
+            </div>
             <div class="room-card-body">
-              <h3>The Lantern</h3>
-              <div class="room-card-specs"><span>Queen Bed</span><span>Sleeps 2</span><span>Private Bath</span></div>
-              <p>Named for the mansion's original gas lanterns. Intimate, well-appointed, and full of character.</p>
+              <h3>Atlantic Room 3</h3>
+              <div class="room-card-specs">
+                <span>One Queen Bed + One Sofa Bed</span>
+                <span>Sleeps 4</span>
+                <span>First Floor</span>
+              </div>
+              <p>A spacious pet-friendly retreat with its own private entrance and a full kitchen.</p>
+              <p class="room-card-price-line">From <strong>$450</strong> / night</p>
               <div class="room-card-buttons">
-                <a href="./book.html" class="btn btn--primary">Book Now</a>
+                <a href="./atlantic-room-3.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties/6a2d6e3a98700b001359f39b" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="scroll-indicator"><span class="scroll-indicator-dot active"></span><span class="scroll-indicator-dot"></span><span class="scroll-indicator-dot"></span></div>
-      </div>
-
-      <div class="room-tab-panel" id="panel-suites" role="tabpanel" aria-labelledby="tab-suites">
-        <div class="grid-3 room-scroll-mobile fade-in">
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Veranda Suite" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-image">
+              <img src="./images/room-4.jpg" alt="Ocean Room 4 — A one-bedroom unit with a Juliet balcony, sitting room, and easy Central Avenue light." width="1800" height="1200" loading="lazy">
+              
+            </div>
             <div class="room-card-body">
-              <h3>The Veranda Suite</h3>
-              <div class="room-card-specs"><span>King Bed</span><span>Sleeps 2</span><span>Private Porch</span></div>
-              <p>Step from your suite onto the wraparound porch. Morning coffee, evening wine — this is what slow living looks like.</p>
-              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+              <h3>Ocean Room 4</h3>
+              <div class="room-card-specs">
+                <span>One King Bed + One Sofa Bed</span>
+                <span>Sleeps 4</span>
+                <span>Second Floor</span>
+              </div>
+              <p>A one-bedroom unit with a Juliet balcony, sitting room, and easy Central Avenue light.</p>
+              <p class="room-card-price-line">From <strong>$439</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./ocean-room-4.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
             </div>
           </div>
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Mansard Suite" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-image">
+              <img src="./images/room-5.jpg" alt="Bay Room 5 — Room to breathe. A generous layout with a large bathroom featuring both tub and shower." width="1800" height="1200" loading="lazy">
+              
+            </div>
             <div class="room-card-body">
-              <h3>The Mansard Suite</h3>
-              <div class="room-card-specs"><span>King Bed</span><span>Sleeps 2</span><span>Sitting Area</span></div>
-              <p>Tucked beneath the mansion's signature mansard roof, with dormer windows and an elegant sitting area.</p>
-              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+              <h3>Bay Room 5</h3>
+              <div class="room-card-specs">
+                <span>One King Bed + One Sofa Bed</span>
+                <span>Sleeps 4</span>
+                <span>Second Floor</span>
+              </div>
+              <p>Room to breathe. A generous layout with a large bathroom featuring both tub and shower.</p>
+              <p class="room-card-price-line">From <strong>$439</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./bay-room-5.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
             </div>
           </div>
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Tower Suite" width="600" height="450" loading="lazy"></div>
-            <div class="room-card-body">
-              <h3>The Tower Suite</h3>
-              <div class="room-card-specs"><span>King Bed</span><span>Sleeps 2</span><span>Tower Views</span></div>
-              <p>The mansion's crown jewel. Panoramic views from the original tower, with a freestanding soaking tub and curated art.</p>
-              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+            <div class="room-card-image">
+              <img src="./images/room-6.jpg" alt="Harbor Room 6 — Two queen beds, a spacious shower, and a private entrance. Made for friends and family." width="1800" height="1200" loading="lazy">
+              <span class="room-card-badge">Pet Friendly</span>
             </div>
-          </div>
-        </div>
-        <div class="scroll-indicator"><span class="scroll-indicator-dot active"></span><span class="scroll-indicator-dot"></span><span class="scroll-indicator-dot"></span></div>
-      </div>
-
-      <!-- Apartments Panel -->
-      <div class="room-tab-panel" id="panel-apartments" role="tabpanel" aria-labelledby="tab-apartments">
-        <div class="grid-3 room-scroll-mobile fade-in">
-          <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Garden Apartment" width="600" height="450" loading="lazy"></div>
             <div class="room-card-body">
-              <h3>The Garden Apartment</h3>
-              <div class="room-card-specs"><span>King Bed</span><span>Sleeps 4</span><span>Full Kitchen</span></div>
-              <p>A ground-floor retreat with a private entrance, full kitchen, and living area. Extended stays welcome.</p>
-              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+              <h3>Harbor Room 6</h3>
+              <div class="room-card-specs">
+                <span>Two Queen Beds</span>
+                <span>Sleeps 4</span>
+                <span>Second Floor</span>
+              </div>
+              <p>Two queen beds, a spacious shower, and a private entrance. Made for friends and family.</p>
+              <p class="room-card-price-line">From <strong>$439</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./harbor-room-6.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
             </div>
           </div>
           <div class="room-card">
-            <div class="room-card-image"><img src="./images/room-suite.png" alt="The Carriage Apartment" width="600" height="450" loading="lazy"></div>
+            <div class="room-card-image">
+              <img src="./images/room-7.jpg" alt="Inlet Room 7 — The mansion's largest room — a full bedroom with two queens and a separate living space." width="1800" height="1200" loading="lazy">
+              <span class="room-card-badge">Pet Friendly</span>
+            </div>
             <div class="room-card-body">
-              <h3>The Carriage Apartment</h3>
-              <div class="room-card-specs"><span>King + Pullout</span><span>Sleeps 4</span><span>Kitchenette</span></div>
-              <p>Generous living space with a separate bedroom, kitchenette, and the feel of your own shore house.</p>
-              <div class="room-card-buttons"><a href="./book.html" class="btn btn--primary">Book Now</a></div>
+              <h3>Inlet Room 7</h3>
+              <div class="room-card-specs">
+                <span>Two Queen Beds + One Sofa Bed</span>
+                <span>Sleeps 6</span>
+                <span>Second Floor</span>
+              </div>
+              <p>The mansion's largest room — a full bedroom with two queens and a separate living space.</p>
+              <p class="room-card-price-line">From <strong>$539</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./inlet-room-7.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="scroll-indicator"><span class="scroll-indicator-dot active"></span><span class="scroll-indicator-dot"></span></div>
+          <div class="room-card">
+            <div class="room-card-image">
+              <img src="./images/room-8.jpg" alt="Asbury Room 8 — High ceilings, a private balcony, and the airy feel of a premium top-floor room." width="1800" height="1200" loading="lazy">
+              
+            </div>
+            <div class="room-card-body">
+              <h3>Asbury Room 8</h3>
+              <div class="room-card-specs">
+                <span>One King Bed + One Sofa Bed</span>
+                <span>Sleeps 4</span>
+                <span>Third Floor</span>
+              </div>
+              <p>High ceilings, a private balcony, and the airy feel of a premium top-floor room.</p>
+              <p class="room-card-price-line">From <strong>$450</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./asbury-room-8.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card-image">
+              <img src="./images/room-9.jpg" alt="Wesley Room 9 — A compact, thoughtfully designed room with a European-style shower. Cozy by design." width="1800" height="1200" loading="lazy">
+              
+            </div>
+            <div class="room-card-body">
+              <h3>Wesley Room 9</h3>
+              <div class="room-card-specs">
+                <span>One Queen Bed</span>
+                <span>Sleeps 2</span>
+                <span>Third Floor</span>
+              </div>
+              <p>A compact, thoughtfully designed room with a European-style shower. Cozy by design.</p>
+              <p class="room-card-price-line">From <strong>$450</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./wesley-room-9.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card-image">
+              <img src="./images/room-10.jpg" alt="Delancy Room 10 — Small but charming — a tub-shower combination and a Juliet balcony full of character." width="1800" height="1200" loading="lazy">
+              
+            </div>
+            <div class="room-card-body">
+              <h3>Delancy Room 10</h3>
+              <div class="room-card-specs">
+                <span>One King Bed</span>
+                <span>Sleeps 2</span>
+                <span>Third Floor</span>
+              </div>
+              <p>Small but charming — a tub-shower combination and a Juliet balcony full of character.</p>
+              <p class="room-card-price-line">From <strong>$399</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./delancy-room-10.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties?minOccupancy=1&adults=1" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card-image">
+              <img src="./images/room-11.jpg" alt="Moore Room 11 — Compact, comfortable, and quietly charming. A Juliet balcony adds a small daily ritual." width="1800" height="1200" loading="lazy">
+              
+            </div>
+            <div class="room-card-body">
+              <h3>Moore Room 11</h3>
+              <div class="room-card-specs">
+                <span>One King Bed</span>
+                <span>Sleeps 2</span>
+                <span>Third Floor</span>
+              </div>
+              <p>Compact, comfortable, and quietly charming. A Juliet balcony adds a small daily ritual.</p>
+              <p class="room-card-price-line">From <strong>$399</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./moore-room-11.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties/6a2d6e7c1f36c2001248af7d" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="room-card">
+            <div class="room-card-image">
+              <img src="./images/room-12.jpg" alt="Seabright Room 12 — A cozy top-floor hideaway with A-frame ceilings — the mansion's most romantic little nook." width="1800" height="1200" loading="lazy">
+              <span class="room-card-badge">Pet Friendly</span>
+            </div>
+            <div class="room-card-body">
+              <h3>Seabright Room 12</h3>
+              <div class="room-card-specs">
+                <span>One Queen Bed</span>
+                <span>Sleeps 2</span>
+                <span>Third Floor</span>
+              </div>
+              <p>A cozy top-floor hideaway with A-frame ceilings — the mansion's most romantic little nook.</p>
+              <p class="room-card-price-line">From <strong>$300</strong> / night</p>
+              <div class="room-card-buttons">
+                <a href="./seabright-room-12.html" class="btn btn--outline">View Room</a>
+                <a href="https://oceancitymansion.guestybookings.com/en/properties/6a2d6e8aae50af00119d54ae" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Book Now</a>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--white" aria-label="Room amenities">
-    <div class="container fade-in">
+  <section class="section section--cream" aria-label="Room amenities">
+    <div class="container container--prose fade-in">
       <div class="text-center mb-8">
-        <h2 class="heading-uppercase">In Every Room</h2>
+        <p class="label mb-4">In Every Room</p>
+        <h2 class="heading-uppercase" style="font-size:var(--text-2xl);">The Essentials, Considered</h2>
       </div>
       <ul class="room-amenities-list">
-        <li>Luxury linens and plush towels</li>
-        <li>Private en-suite bathroom</li>
-        <li>Complimentary Wi-Fi</li>
+        <li>Nespresso machine with complimentary coffee</li>
+        <li>In-room fridge and complimentary electrolyte drinks</li>
+        <li>Linens, towels, and robes provided</li>
+        <li>Built-in closets and queen-size couches</li>
+        <li>Toothbrush, toothpaste, and sunscreen</li>
+        <li>Smart TV and Smart Wi-Fi throughout</li>
+        <li>Complimentary beach tags</li>
         <li>Individually controlled climate</li>
-        <li>Curated art and period details</li>
-        <li>Complimentary grab-n-go snacks, espresso, tea, coffee, filtered and sparkling water, ice</li>
-        <li>Beach tags, chairs, and umbrellas</li>
-        <li>Concierge service</li>
-        <li>Access to the wraparound porch</li>
-        <li>In-room safe</li>
       </ul>
     </div>
   </section>
