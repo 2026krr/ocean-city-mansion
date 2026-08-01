@@ -105,6 +105,7 @@ function renderFooter() {
     <div class="container">\
       <div class="footer-grid">\
         <div class="footer-brand">\
+          <img src="./images/logo.png" alt="Ocean City Mansion" class="footer-logo">\
           <div class="logo-text">Ocean City Mansion</div>\
           <p>A 12-room boutique hotel in a restored 1898 Victorian mansion. Steps from the beach and boardwalk in Ocean City, NJ.</p>\
           <div class="footer-social">\

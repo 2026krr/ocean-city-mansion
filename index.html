@@ -106,13 +106,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <main id="main">
   <!-- Hero -->
   <section class="hero hero--tall" aria-label="Welcome hero">
-    <div class="hero-bg">
-      <img src="./images/exterior.jpg" alt="Ocean City Mansion — a restored 1898 Victorian with a wraparound porch and checkerboard-tile floor" width="1800" height="1200" loading="eager" fetchpriority="high">
+    <div class="hero-bg hero-bg--video">
+      <video
+        class="hero-video"
+        autoplay muted loop playsinline preload="metadata"
+        poster="./images/hero-poster.jpg"
+        aria-hidden="true">
+        <source src="./videos/hero-loop-mobile.mp4" type="video/mp4" media="(max-width: 720px)">
+        <source src="./videos/hero-loop.mp4" type="video/mp4">
+      </video>
+      <img class="hero-video-fallback" src="./images/hero-poster.jpg" alt="Ocean City Mansion — a restored 1898 Victorian with a wraparound porch and checkerboard-tile floor" width="1800" height="1013" loading="eager" fetchpriority="high">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="label" style="color:rgba(255,255,255,0.85);margin-bottom:var(--space-4);letter-spacing:0.3em;">EST. 1898 &middot; 416 CENTRAL AVE</p>
-      <h1>Ocean City Mansion</h1>
+      <img src="./images/logo.png" alt="Ocean City Mansion — 416 Central Ave · 1898–2026" class="hero-logo" width="640" height="344">
       <p>Distinguished history. Effortless luxury. Twelve individually designed rooms in a restored Victorian on the Jersey Shore.</p>
       <a href="./book.html" class="btn btn--outline-white">Reserve Your Stay</a>
     </div>
