@@ -2269,7 +2269,7 @@ h4 { font-size: var(--text-xl); }
 /* Hero logo (over the video) */
 .hero-logo {
   display: block;
-  width: min(560px, 78vw);
+  width: min(420px, 68vw);
   height: auto;
   margin: 0 auto var(--space-6);
   filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,0.35));
