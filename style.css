@@ -262,17 +262,19 @@ h4 { font-size: var(--text-xl); }
   white-space: nowrap;
 }
 
+/* === VARIANT A: Slim logo, tight header === */
 .logo-center a { display: inline-block; line-height: 0; }
 .header-logo {
   display: block;
-  height: clamp(48px, 5vw, 68px);
+  height: clamp(34px, 3.2vw, 44px);
   width: auto;
   transition: opacity 0.2s;
 }
 .logo-center a:hover .header-logo { opacity: 0.85; }
 @media (max-width: 768px) {
-  .header-logo { height: 44px; }
+  .header-logo { height: 32px; }
 }
+#site-header { padding-top: var(--space-3); padding-bottom: var(--space-3); }
 
 /* Book Now */
 .nav-right {
@@ -2320,4 +2322,30 @@ h4 { font-size: var(--text-xl); }
 /* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
+}
+
+/* === Mermaid brand mark === */
+.mermaid-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin: var(--space-6) auto;
+  max-width: 320px;
+}
+.mermaid-mark img {
+  height: 34px;
+  width: auto;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+.mermaid-mark-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--color-gray-400, #b8b0a4);
+  opacity: 0.6;
+}
+@media (max-width: 640px) {
+  .mermaid-mark img { height: 28px; }
+  .mermaid-mark { max-width: 260px; gap: var(--space-3); }
 }
