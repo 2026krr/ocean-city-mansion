@@ -2076,13 +2076,13 @@ h4 { font-size: var(--text-xl); }
   left: var(--space-3);
   background: rgba(255,255,255,0.95);
   color: var(--color-teal-dark);
-  padding: 4px 12px;
+  padding: 6px 14px;
   font-family: var(--font-sans);
   font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 999px;
 }
 .room-card-price-line {
   font-family: var(--font-sans);
@@ -2228,31 +2228,121 @@ h4 { font-size: var(--text-xl); }
 }
 .faq-list .faq-body a { color: var(--color-teal-dark); text-decoration: underline; }
 
-/* Gallery page */
+/* Gallery page — CSS Grid (fixes iOS Safari CSS columns + lazy loading bug) */
 .gallery-grid {
-  columns: 3;
-  column-gap: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
 }
 .gallery-tile {
   display: block;
-  margin-bottom: var(--space-4);
-  break-inside: avoid;
   overflow: hidden;
   border-radius: 2px;
   cursor: zoom-in;
+  aspect-ratio: 3 / 4;
+  background: var(--color-gray-100, #f5f2ec);
 }
 .gallery-tile img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
 .gallery-tile:hover img { transform: scale(1.03); }
-@media (max-width: 900px) { .gallery-grid { columns: 2; } }
-@media (max-width: 520px) { .gallery-grid { columns: 1; } }
+@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .gallery-grid { grid-template-columns: 1fr; } }
 
 /* Room card position for badge */
 .room-card-image { position: relative; }
+
+/* Room detail: extra breathing room between feature pills and spec list */
+.room-detail-tags + .room-spec-list { margin-top: var(--space-10); }
+
+/* ============================================================
+   Room detail: horizontal swipe gallery (hero-featured photos)
+   ============================================================ */
+.room-swipe {
+  position: relative;
+  margin-top: var(--space-6);
+}
+.room-swipe-track {
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: var(--space-3);
+}
+.room-swipe-track::-webkit-scrollbar { display: none; }
+.room-swipe-slide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: min(88%, 1100px);
+  aspect-ratio: 3 / 2;
+  background: var(--color-gray-100, #f5f2ec);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.room-swipe-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.room-swipe-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  color: var(--color-gray-900);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+  user-select: none;
+}
+.room-swipe-btn:hover { background: white; transform: translateY(-50%) scale(1.05); }
+.room-swipe-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.room-swipe-btn--prev { left: var(--space-3); }
+.room-swipe-btn--next { right: var(--space-3); }
+.room-swipe-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--space-4);
+}
+.room-swipe-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-gray-300, #d5cec2);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.room-swipe-dot[aria-current="true"] {
+  background: var(--color-teal-dark, #2b6f6a);
+  transform: scale(1.3);
+}
+@media (max-width: 640px) {
+  .room-swipe-slide { width: 92%; aspect-ratio: 4 / 3; }
+  .room-swipe-btn { display: none; }
+}
 
 /* ============================================================
    ADDED: Video hero + logo placement

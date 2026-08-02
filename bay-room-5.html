@@ -72,11 +72,23 @@
     </div>
   </section>
 
-<section class="section section--white" aria-label="More views">
+<section class="section section--white" aria-label="Room gallery">
   <div class="container">
-    <div class="room-gallery-grid">
-      <img src="./images/room-5-1.jpg" alt="Bay Room 5 — view" loading="lazy" width="1800" height="1200">
-      <img src="./images/room-5-2.jpg" alt="Bay Room 5 — view" loading="lazy" width="1800" height="1200">
+    <div class="room-swipe" data-room-swipe>
+      <button class="room-swipe-btn room-swipe-btn--prev" aria-label="Previous photo" data-swipe-prev>&#8592;</button>
+      <button class="room-swipe-btn room-swipe-btn--next" aria-label="Next photo" data-swipe-next>&#8594;</button>
+      <div class="room-swipe-track" data-swipe-track>
+          <div class="room-swipe-slide">
+            <img src="./images/room-5.jpg" alt="Room 5 photo 1" loading="eager" fetchpriority="high" width="1800" height="1200">
+          </div>
+          <div class="room-swipe-slide">
+            <img src="./images/room-5-1.jpg" alt="Room 5 photo 2" loading="lazy" width="1800" height="1200">
+          </div>
+          <div class="room-swipe-slide">
+            <img src="./images/room-5-2.jpg" alt="Room 5 photo 3" loading="lazy" width="1800" height="1200">
+          </div>
+      </div>
+      <div class="room-swipe-dots" data-swipe-dots><button class="room-swipe-dot" aria-label="Show photo 1" data-index="0" aria-current="true"></button><button class="room-swipe-dot" aria-label="Show photo 2" data-index="1"></button><button class="room-swipe-dot" aria-label="Show photo 3" data-index="2"></button></div>
     </div>
   </div>
 </section>

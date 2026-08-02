@@ -733,6 +733,68 @@ function initInterstitialModal() {
 }
 
 /* ---- Init ---- */
+/* ---- Room Swipe Gallery ---- */
+function initRoomSwipe() {
+  var swipers = document.querySelectorAll('[data-room-swipe]');
+  if (!swipers.length) return;
+  swipers.forEach(function(root) {
+    var track = root.querySelector('[data-swipe-track]');
+    var prev = root.querySelector('[data-swipe-prev]');
+    var next = root.querySelector('[data-swipe-next]');
+    var dotsContainer = root.querySelector('[data-swipe-dots]');
+    var dots = dotsContainer ? dotsContainer.querySelectorAll('.room-swipe-dot') : [];
+    var slides = track ? track.querySelectorAll('.room-swipe-slide') : [];
+    if (!track || slides.length === 0) return;
+
+    function currentIndex() {
+      var trackRect = track.getBoundingClientRect();
+      var centerX = trackRect.left + trackRect.width / 2;
+      var best = 0, bestDist = Infinity;
+      for (var i = 0; i < slides.length; i++) {
+        var r = slides[i].getBoundingClientRect();
+        var c = r.left + r.width / 2;
+        var d = Math.abs(c - centerX);
+        if (d < bestDist) { bestDist = d; best = i; }
+      }
+      return best;
+    }
+    function updateDots() {
+      var idx = currentIndex();
+      for (var i = 0; i < dots.length; i++) {
+        if (i === idx) dots[i].setAttribute('aria-current', 'true');
+        else dots[i].removeAttribute('aria-current');
+      }
+      if (prev) prev.disabled = (idx === 0);
+      if (next) next.disabled = (idx === slides.length - 1);
+    }
+    function goTo(idx) {
+      idx = Math.max(0, Math.min(slides.length - 1, idx));
+      var slide = slides[idx];
+      var offset = slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+      track.scrollTo({ left: offset, behavior: 'smooth' });
+    }
+    if (prev) prev.addEventListener('click', function() { goTo(currentIndex() - 1); });
+    if (next) next.addEventListener('click', function() { goTo(currentIndex() + 1); });
+    for (var i = 0; i < dots.length; i++) {
+      (function(idx) {
+        dots[idx].addEventListener('click', function() { goTo(idx); });
+      })(i);
+    }
+    var raf = null;
+    track.addEventListener('scroll', function() {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(updateDots);
+    });
+    // Keyboard nav
+    root.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIndex() - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(currentIndex() + 1); }
+    });
+    root.tabIndex = 0;
+    updateDots();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   renderHeader();
   renderFooter();
@@ -748,4 +810,5 @@ document.addEventListener('DOMContentLoaded', function() {
   initLightbox();
   initMobileBookingWidget();
   initInterstitialModal();
+  initRoomSwipe();
 });
