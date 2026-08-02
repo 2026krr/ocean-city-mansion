@@ -764,6 +764,10 @@ function initRoomSwipe() {
         if (i === idx) dots[i].setAttribute('aria-current', 'true');
         else dots[i].removeAttribute('aria-current');
       }
+      for (var j = 0; j < slides.length; j++) {
+        if (j === idx) slides[j].classList.add('is-active');
+        else slides[j].classList.remove('is-active');
+      }
       if (prev) prev.disabled = (idx === 0);
       if (next) next.disabled = (idx === slides.length - 1);
     }

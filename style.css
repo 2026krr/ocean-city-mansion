@@ -2265,28 +2265,41 @@ h4 { font-size: var(--text-xl); }
 .room-swipe {
   position: relative;
   margin-top: var(--space-6);
+  /* Bleed the track slightly outside the container so cards can peek from the edges */
 }
 .room-swipe-track {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-5);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding-bottom: var(--space-3);
+  padding: var(--space-2) 0 var(--space-5);
+  /* Symmetric edge padding so first/last card sits centered with peek on both sides */
+  scroll-padding-inline: calc(50% - 32ch);
+  padding-inline: calc(50% - 32ch);
 }
 .room-swipe-track::-webkit-scrollbar { display: none; }
 .room-swipe-slide {
   flex: 0 0 auto;
   scroll-snap-align: center;
-  width: min(88%, 1100px);
-  aspect-ratio: 3 / 2;
+  width: min(64ch, 62%);
+  aspect-ratio: 4 / 3;
   background: var(--color-gray-100, #f5f2ec);
-  border-radius: 2px;
+  border-radius: 18px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 8px 24px -12px rgba(0,0,0,0.18), 0 2px 6px -2px rgba(0,0,0,0.08);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.94);
+  opacity: 0.72;
+}
+.room-swipe-slide.is-active {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 18px 40px -18px rgba(0,0,0,0.28), 0 4px 12px -4px rgba(0,0,0,0.12);
 }
 .room-swipe-slide img {
   width: 100%;
@@ -2296,14 +2309,14 @@ h4 { font-size: var(--text-xl); }
 }
 .room-swipe-btn {
   position: absolute;
-  top: 50%;
+  top: calc(50% - var(--space-3));
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 14px -4px rgba(0,0,0,0.18), 0 2px 6px -2px rgba(0,0,0,0.08);
   color: var(--color-gray-900);
   font-size: 20px;
   line-height: 1;
@@ -2311,19 +2324,19 @@ h4 { font-size: var(--text-xl); }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  z-index: 2;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  z-index: 3;
   user-select: none;
 }
-.room-swipe-btn:hover { background: white; transform: translateY(-50%) scale(1.05); }
-.room-swipe-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-.room-swipe-btn--prev { left: var(--space-3); }
-.room-swipe-btn--next { right: var(--space-3); }
+.room-swipe-btn:hover { background: white; transform: translateY(-50%) scale(1.06); }
+.room-swipe-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.room-swipe-btn--prev { left: var(--space-4); }
+.room-swipe-btn--next { right: var(--space-4); }
 .room-swipe-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: var(--space-4);
+  margin-top: var(--space-2);
 }
 .room-swipe-dot {
   width: 8px;
@@ -2333,14 +2346,31 @@ h4 { font-size: var(--text-xl); }
   border: 0;
   padding: 0;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, width 0.2s;
 }
 .room-swipe-dot[aria-current="true"] {
   background: var(--color-teal-dark, #2b6f6a);
-  transform: scale(1.3);
+  width: 24px;
+}
+@media (max-width: 900px) {
+  .room-swipe-track {
+    scroll-padding-inline: 8%;
+    padding-inline: 8%;
+    gap: var(--space-4);
+  }
+  .room-swipe-slide { width: 78%; }
 }
 @media (max-width: 640px) {
-  .room-swipe-slide { width: 92%; aspect-ratio: 4 / 3; }
+  .room-swipe-track {
+    scroll-padding-inline: 6%;
+    padding-inline: 6%;
+    gap: var(--space-3);
+  }
+  .room-swipe-slide {
+    width: 84%;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+  }
   .room-swipe-btn { display: none; }
 }
 
